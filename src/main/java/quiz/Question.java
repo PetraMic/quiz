@@ -8,10 +8,13 @@ import java.util.List;
 @Getter
 public class Question {
     private String questionText;
-    private List<Answer> answers = new ArrayList<>();
+    private List<Answer> answers;
+    private QuestionType type;
 
-    public Question(String questionText) {
+    public Question(String questionText, QuestionType type) {
         this.questionText = questionText;
+        this.type = type;
+        this.answers = new ArrayList<>();
     }
 
     public void addAnswer(Answer answer) {

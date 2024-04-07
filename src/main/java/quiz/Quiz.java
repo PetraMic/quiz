@@ -7,7 +7,13 @@ import java.util.Scanner;
 public class Quiz {
     private List<Question> questions = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
-    private int score = 0;
+    private int score;
+
+    public Quiz() {
+        this.questions = new ArrayList<>();
+        this.scanner = new Scanner(System.in);
+        this.score = 0;
+    }
 
     public void addQuestion(Question question) {
         questions.add(question);
