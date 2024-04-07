@@ -29,7 +29,6 @@ public class Question {
         }
         return true;
     }
-
     public boolean isCorrectResponse(String response) {
         List<Character> correctAnswers = new ArrayList<>();
         for (char i = 'A'; i < 'A' + answers.size(); i++) {
@@ -44,5 +43,9 @@ public class Question {
             correctAnswers.remove((Character) c);
         }
         return correctAnswers.isEmpty();
+    }
+
+    public String getQuestionText() {
+        return questionText + " (" + type.toString() + ")";
     }
 }
